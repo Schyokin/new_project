@@ -1,0 +1,264 @@
+//@import url(./about.less) можно прицепить внешний файл
+
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    src: url(./fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "Roboto" , sans-serif;
+    font-weight: 400;
+    src: url(./fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    src: url(./fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "Oswald" ,sans-serif;
+    font-weight: 400;
+    src: url(./fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
+:root{
+      --main-color: #F2C94C; //переменные могут быть шрифты, отступы и т.д. любые параметры используются var()
+      --header-logo: "Oswald", sans-serif;
+
+}
+
+@maintitle: "Montserrat", sans-serif;
+
+*{
+    margin: 0; // внешние отступы в пикселях
+    padding: 0; // внутренние отступы 
+    box-sizing: content-box; 
+    
+}
+
+html {
+      font-size: 10px; // em == 0.1 документа 
+      font-family: "Roboto",sans-serif;
+      background-color:  rgba(27,29,60,0.8);
+}
+
+body {
+    
+    background-image:  url(./img/bg.jpg);
+    background-position:  center center; // по Y по X
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+//  .main-block{
+//     display: flex;
+//     flex-direction: row-reverse;
+// }
+
+//h1{
+//    font-family: @maintitle; // или 
+//    font-family: var(--header-logo);
+//    font-weight: 700;
+//}
+
+//div {
+//    font-size: 1rem; // 1 rem == 10px
+//}
+.social{
+    height: 4.5rem;
+    width: 20rem;
+    background-color: var(--main-color);
+    border-radius: 0 0 1.5rem 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.bg {
+    max-width: 100%;
+    max-height: 100%;
+   // top: 0;
+   // left: 0;
+   // position: absolute;
+   background-color:  rgba(27,29,60,0.8)
+  
+}
+
+.wrapper {
+    width: calc( 100% - 90px); //ширина устанавливается и из нее вычитается 90пикс
+    max-width: 1440px;
+    margin: 0px auto ; // 0px - вверху и внизу auto - справа и слева автоматом
+    //здесь существует много видов записей 0рх 0рх 0рх 0рх ноль пикселей по всем сторонам
+     display: flex;
+
+}
+
+.header-block { 
+    width: 28.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background-color: #ccc;
+
+}
+//.main-header {
+//    width: 100%;
+ //   height: 100%;
+   
+//}
+
+.logo-img {
+
+    margin-top: 4rem;
+    height: 12rem;
+    width: 15rem;
+   }
+
+.header-logo {
+    margin-top: 1rem;
+
+}
+.logo-link {
+    text-decoration: none;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    span{ // здесь в файле .less допускается такая запись внутри родительского блока
+        color: #fff;
+    }
+    
+}
+
+//.logo-link span { в style.css будет только такая запись
+//     color: #fff;
+//}
+
+.nav{
+    margin-top: 4.7rem;
+    .nav-list {
+        padding: 0;
+        margin: 0;   
+        font-size: 0;
+}
+}
+
+
+.nav-item {
+    &__link{
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        padding: 1.2rem 0.5rem;
+        display: block;
+        font-size: 1.7rem;
+        transition: all 0.3s ease-in;
+        }    
+        :hover {
+            color: yellow;
+             }      
+}
+
+//.nav-item__link {
+//}
+
+.header-support {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.support, .contact {
+    
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        padding: 1.2rem 0.5rem;
+        display: block;
+        font-size: 1.7rem;
+        transition: all 0.3s ease-in;
+      
+}
+.support:hover, .contact:hover {
+      color: var(--main-color);
+      
+}
+
+.main-content {
+    margin: 5rem;
+   // margin-top: 9.5rem;
+    }
+
+.main-content__title {
+    font-size: 4.6rem;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    span{
+        color: var(--main-color);
+    }
+
+}
+.main-content__descript {
+    font-size: 1.4rem;
+    color: #000;
+    line-height: 4rem;
+    margin-bottom: 3rem;
+
+}
+.btn {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    background-color: transparent;
+    font-size: 2.2rem;
+    color: #fff;
+    border: 2px solid var(--main-color);
+    border-radius: 1.7rem ;
+    padding: 1.5rem 2rem;
+}
+
+ .btn::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+   // content: "Мой текст псевдоэлемент";// обязательный элемент без него исчезает
+    display: block;
+    width: 20rem;
+    height: 20rem;
+    color: red;
+    background-color: var(--main-color);
+    transform: translate(50%, 1rem);
+
+ }
+.block-img {
+    margin-top: 5rem;
+      
+}
+.image {
+   
+    max-width: 26rem;
+    max-height: 15rem;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    border-color: var(--main-color);
+    border-width: 0.3rem;
+    border-style: solid;
+    margin: 1rem;
+}
+  .block-img:nth-child(3)
+{
+
+}
