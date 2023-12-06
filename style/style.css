@@ -41,7 +41,7 @@ body {
 }
 footer {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
 }
 .social {
   height: 4.5rem;
@@ -58,9 +58,9 @@ footer {
   background-color: rgba(27, 29, 60, 0.8);
 }
 .wrapper {
-  width: calc(100% - 90px);
-  max-width: 1440px;
-  margin: 0px auto ;
+  width: calc(100% - 9rem);
+  max-width: 144rem;
+  margin: 0rem auto ;
   display: flex;
 }
 .header-block {
