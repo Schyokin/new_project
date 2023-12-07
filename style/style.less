@@ -111,6 +111,9 @@ footer{
     background-color: #ccc;
 
 }
+ .header-block:last-child{
+     margin-bottom: 0;
+ }
 //.main-header {
 //    width: 100%;
  //   height: 100%;
@@ -176,20 +179,19 @@ footer{
 //}
 
 .header-support {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5rem;
+       margin-top: 5rem;
 }
 
 .support, .contact {
-    
+        display:flex;
+        justify-content: bottom;
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
         font-family: 'Oswald', sans-serif;
         font-weight: 400;
         padding: 1.2rem 0.5rem;
-        display: block;
+       // display: block;
         font-size: 1.7rem;
         transition: all 0.3s ease-in;
       
@@ -232,19 +234,19 @@ footer{
     padding: 1.5rem 2rem;
 }
 
- .btn::after{
-    position: absolute;
-    top: 0;
-    left: 0;
-   // content: "Мой текст псевдоэлемент";// обязательный элемент без него исчезает
-    display: block;
-    width: 20rem;
-    height: 20rem;
-    color: red;
-    background-color: var(--main-color);
-    transform: translate(50%, 1rem);
+//  .btn::after{
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//    // content: "Мой текст псевдоэлемент";// обязательный элемент без него исчезает
+//     display:block;
+//     width: 20rem;
+//     height: 20rem;
+//     color: red;
+//     background-color: var(--main-color);
+//     transform: translate(50%, 1rem);
 
- }
+//  }
 .block-img {
     margin-top: 5rem;
       
@@ -259,4 +261,29 @@ footer{
     border-style: solid;
     margin: 1rem;
 }
-  
+.main-content__footer{
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    background-color: transparent;
+    font-size: 2.1rem;
+    color: #fff;
+    margin-top: 1rem;
+}
+.main-content__footer_descript{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    background-color: transparent;
+    font-size: 0.8rem;
+    color: #000;
+}
+// .main-content__footer::after{
+//   //  position: absolute;
+//   margin-top: 2rem;
+//     border-left: 2rem solid transparent;
+//   border-right: 2rem solid transparent;
+//   border-top: 2rem solid #F2C94C;
+//  // bottom: -45px;
+//   content: "";
+//   height: 3rem;
+//   left: 35rem;
+// }
