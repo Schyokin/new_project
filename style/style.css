@@ -137,7 +137,7 @@ footer {
   color: var(--main-color);
 }
 .main-content {
-  margin: 5rem;
+  margin: 3rem;
 }
 .main-content__title {
   font-size: 4.6rem;
@@ -190,4 +190,7 @@ footer {
   background-color: transparent;
   font-size: 0.8rem;
   color: #000;
+}
+.main-content__footer::after {
+  position: absolute;
 }
