@@ -42,6 +42,10 @@ body {
 footer {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+.footer_end {
+  margin-top: 70rem;
 }
 .social {
   height: 4.5rem;
@@ -70,9 +74,6 @@ footer {
   justify-content: top;
   align-items: center;
   background-color: #ccc;
-}
-.header-block:last-child {
-  margin-bottom: 0;
 }
 .logo-img {
   margin-top: 4rem;
